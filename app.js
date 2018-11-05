@@ -9,5 +9,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
+  // eslint-disable-next-line
   console.log(`Server running on ${port}/`);
 });
