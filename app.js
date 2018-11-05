@@ -10,5 +10,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
+  // eslint-disable-next-line
   console.log(`Server running at http://${hostname}:${port}/`);
 });
