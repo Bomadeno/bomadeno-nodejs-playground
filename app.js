@@ -49,4 +49,7 @@ const options = {
 
 createTerminus(server, options);
 
-app.listen(port);
+app.listen(port, () => {
+  // eslint-disable-next-line
+  console.log(`Server running`);
+});
