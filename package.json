@@ -4,7 +4,7 @@
   "description": "A simple web service built with nodejs",
   "main": "app.js",
   "scripts": {
-    "lint": "node_modules/eslint/bin/eslint.js app.js",
+    "lint": "eslint --ignore-path .gitignore .",
     "test": "node test.js"
   },
   "repository": {
