@@ -1,15 +1,12 @@
-const http = require('http');
+const express = require('express');
 
 const hostname = '127.0.0.1';
 const port = process.env.PORT;
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Express is working.');
 });
 
-server.listen(port, hostname, () => {
-  // eslint-disable-next-line
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(port);
