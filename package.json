@@ -29,6 +29,7 @@
     "tape": "4.9.1"
   },
   "dependencies": {
+    "@godaddy/terminus": "^4.1.0",
     "express": "^4.16.4"
   }
 }
