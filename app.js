@@ -3,7 +3,7 @@ const http = require('http');
 const express = require('express');
 const { createTerminus } = require('@godaddy/terminus');
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const app = express();
 
 // Code taken from https://github.com/godaddy/terminus
