@@ -1,1 +1,26 @@
 bomadeno-nodejs-playground
+
+A playground in which I am experimenting with the nodejs ecosystem. 
+
+#Pre requisites
+ - Node JS (developed with version 10.13.0)
+ - heroku CLI toolbelt (not strictly required, but you'll need to do some editing to make it work without)
+ - PostgreSQL
+
+#Installation
+Create a .env file with
+- DATABASE_URL (e.g. DATABASE_URL='postgres://localhost:5432/databasename').
+- PORT= 3000 (or whatever you prefer)
+
+*TODO how to create local database*
+
+This app is designed to be run with the heroku toolbelt. Once installed, run "heroku local web" to
+start the server.
+
+#General use
+Access the app at localhost:PORT/ - it should guide you from there.
+
+#API use
+The api is available at localhost:PORT/news/
+
+*TODO document API*
