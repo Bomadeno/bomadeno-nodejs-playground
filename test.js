@@ -11,7 +11,7 @@ test('responds to requests', (t) => {
     request(`http://127.0.0.1:${port}`, { timeout: 1500 }, (error, response, body) => {
       t.false(error);
       t.equal(response.statusCode, 200);
-      t.notEqual(body.indexOf('Express is working.'), -1);
+      t.notEqual(body.indexOf('Application is installed and running. (go to /index.html to get started)'), -1);
     });
   });
 });

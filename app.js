@@ -1,6 +1,7 @@
 const path = require('path');
 const http = require('http');
 const express = require('express');
+const bodyParser = require('body-parser');
 const { createTerminus } = require('@godaddy/terminus');
 
 const port = process.env.PORT || 5000;
@@ -27,10 +28,15 @@ function healthCheck() {
   );
 }
 
+// Use body parser to get nicer objects
+app.use(bodyParser.urlencoded({ extended: true }));
+// Serve static/public pages
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.send('Express is working.');
+require('./app/routes')(app, {});
+
+app.get('/install', (req, res) => {
+  res.send('Application is installed and running. (go to /index.html to get started)');
 });
 
 const server = http.createServer(app);
