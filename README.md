@@ -5,14 +5,19 @@ A playground in which I am experimenting with the nodejs ecosystem.
 #Pre requisites
  - Node JS (developed with version 10.13.0)
  - heroku CLI toolbelt (not strictly required, but you'll need to do some editing to make it work without)
- - PostgreSQL
+ - PostgreSQL (ensure local access is enabled)
 
 #Installation
 Create a .env file with
-- DATABASE_URL (e.g. DATABASE_URL='postgres://localhost:5432/databasename').
 - PORT= 3000 (or whatever you prefer)
+- Database credentials, either DATABASE_URL or
+  - DB_USERNAME_DEV
+  - DB_NAME_DEV
+  - DB_PASSWORD_DEV
 
-*TODO how to create local database*
+Run "node_modules/.bin/sequelize db:create" to create the dev database
+
+*todo how to migrate*
 
 This app is designed to be run with the heroku toolbelt. Once installed, run "heroku local web" to
 start the server.
