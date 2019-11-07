@@ -1,0 +1,1 @@
+migrations will go here, this file ensures herokue creates folder structure
